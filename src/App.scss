@@ -1,7 +1,21 @@
+.container {
+    .logo-container {
+        position: absolute;
+        top: 20px;
+        left: 22px;
+
+        .logo {
+            width: 50%;
+        }
+    }
+}
+
+
 .App {
     background-color: #BB1233;
     border-radius: 10px;
     width: 50%;
+    padding-top: 50px;
 
     .display {
         background-color: #2D2829;
