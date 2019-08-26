@@ -30,8 +30,13 @@ function App() {
     } else {
       setDisplayValue(displayValue => `${displayValue} ${operator} `);
     }
-    
   }
+
+  // const clear = (special) => {
+  //   if(special === 'C') {
+  //     setDisplayValue('');
+  //   }
+  // }
 
   return (
     <div className="container">
@@ -40,10 +45,20 @@ function App() {
         {/* STEP 4 - Render your components here and be sure to properly import/export all files */}
       
       <Display number={ displayValue }/>
-      <Specials />
-      <Numbers addNumber={ addNumber }/>
-      <Operators addOperator={addOperator}/>
+      <div className="button-container">
+        <div className="specials-container">  
+          <Specials />
+        </div>  
+          
+        <div className="numbers-container">
+          <Numbers addNumber={ addNumber }/>
+        </div>
+          
+        <div className="operator-container">
+          <Operators addOperator={addOperator}/>
+        </div>
       
+      </div>
       </div>
     </div>
   );
