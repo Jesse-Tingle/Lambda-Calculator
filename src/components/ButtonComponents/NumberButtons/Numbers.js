@@ -16,6 +16,12 @@ const Numbers = (props) => {
     <div>
 
       {buttonNumbers.map(number => {
+        if(number === '0'){
+          return <NumberButton key={number}
+                               text={ number }
+                               addNumber={ props.addNumber }
+                               zero />
+        }
         return <NumberButton key={number} 
                              text={ number } 
                              addNumber={ props.addNumber } />;
